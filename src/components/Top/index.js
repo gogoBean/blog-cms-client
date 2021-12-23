@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from 'react'
-import { SmileOutlined,UserOutlined, LogoutOutlined  } from '@ant-design/icons';
-import './index.less'
+import { Space } from 'antd';
+import Avatar from './AvatarDropdown';
+import NoticeIcon from './NoticeIcon';
+import styles from './index.module.less';
+
 class Top extends Component {
     render () {
         return (
@@ -26,8 +29,11 @@ class Top extends Component {
             //         </div>
             //     </div>
             // </div>
-            // <Avatar menu />
-            <div>1111</div>
+            <Space className={styles.right}>
+                <NoticeIcon />
+                <Avatar />
+            </Space>
+
         )
     }
 }

@@ -40,11 +40,12 @@ class Home extends Component {
                     <MenuBar></MenuBar>
                 </Sider>
                 <Layout className="site-layout">
-                    <Header className="site-layout-background" style={{ padding: 0 }} >
+                    <Header className={`my-header site-layout-background`} >
                         {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                             className: 'trigger',
                             onClick: this.toggle,
                         })}
+                        <Top></Top>
                     </Header>
                     <Content style={{ margin: '0 16px' }}>
                         <Breadcrumb style={{ margin: '16px 0' }}>
