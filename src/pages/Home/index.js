@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import {Route,Switch} from 'react-router-dom'
 import { Layout, Menu, Breadcrumb } from 'antd'
 import Top from '../../components/Top'
 import MenuBar from '../../components/MenuBar'
+import UserMgr from '@/pages/UserMgr'
 import {
     MenuUnfoldOutlined,
     MenuFoldOutlined
@@ -21,6 +23,7 @@ class Home extends Component {
     };
 
     render () {
+        const {match}=this.props
         return (
             // <Layout style={{ minHeight: '100vh' }}>
             //     <Header style={{ color: '#fff', padding: '0' }}>
@@ -55,6 +58,10 @@ class Home extends Component {
                         <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
                             Bill is a cat.
                         </div>
+                        <Switch>
+                        <Route path={`${match.path}/list`} component={UserMgr}></Route>
+                        <Route render={()=><h3>欢迎访问CMS后台管理系统</h3>}></Route>
+                    </Switch>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
                 </Layout>
