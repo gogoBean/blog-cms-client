@@ -38,8 +38,8 @@ class MenuBar extends Component {
                     <Menu.Item key="/home/usermgr" icon={<UserOutlined />}>
                         用户管理
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<DesktopOutlined />}>
-                        Option 2
+                    <Menu.Item key="/home/articlemgr" icon={<FileOutlined />}>
+                        文章管理
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<PieChartOutlined />} title="User">
                         <Menu.Item key="3">Tom</Menu.Item>
@@ -50,7 +50,7 @@ class MenuBar extends Component {
                         <Menu.Item key="6">Team 1</Menu.Item>
                         <Menu.Item key="8">Team 2</Menu.Item>
                     </SubMenu>
-                    <Menu.Item key="9" icon={<FileOutlined />}>
+                    <Menu.Item key="9" icon={<DesktopOutlined />}>
                         Files
                     </Menu.Item>
                 </Menu>

@@ -4,6 +4,7 @@ import { Layout, Menu, Breadcrumb } from 'antd'
 import Top from '../../components/Top'
 import MenuBar from '../../components/MenuBar'
 import UserMgr from '@/pages/UserMgr'
+import ArticleMgr from '@/pages/Article'
 import {
     MenuUnfoldOutlined,
     MenuFoldOutlined
@@ -44,6 +45,7 @@ class Home extends Component {
                         </Breadcrumb>
                         <Switch>
                         <Route path={`${match.path}/usermgr`} component={UserMgr}></Route>
+                        <Route path={`${match.path}/articlemgr`} component={ArticleMgr}></Route>
                         <Route render={()=><h3>欢迎访问CMS后台管理系统</h3>}></Route>
                     </Switch>
                     </Content>

@@ -80,23 +80,12 @@ class index extends Component {
             renderItem={(item) => (
               <List.Item
                 actions={[
-                  <a
-                    key="edit"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      // showEditModal(item);
-                    }}
-                  >
-                    编辑
-                  </a>,
-                  <a
-                    key="delete"
-                    onClick={(e) => {
-                      e.preventDefault();
-                    }}
-                  >
-                    删除
-                  </a>,
+                  <Button key="edit" type="link" style={{ padding: 0 }}>
+                  编辑
+                </Button>,
+                  <Button key="delete" type="link" style={{ padding: 0 }}>
+                  删除
+                </Button>
                 ]}
               >
                 <List.Item.Meta
