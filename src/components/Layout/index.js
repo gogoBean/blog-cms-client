@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
-import { Layout, Menu, Breadcrumb } from 'antd'
+import { Layout, Breadcrumb } from 'antd'
 import Top from '../../components/Top'
 import MenuBar from '../../components/MenuBar'
-import UserMgr from '@/pages/UserMgr'
-import Article from '@/pages/Article'
 
 import {
     MenuUnfoldOutlined,
@@ -25,7 +22,6 @@ class Home extends Component {
     };
 
     render () {
-        const { match } = this.props
         return (
             <Layout style={{ minHeight: '100vh' }}>
                 <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
@@ -44,12 +40,7 @@ class Home extends Component {
                             <Breadcrumb.Item>User</Breadcrumb.Item>
                             <Breadcrumb.Item>Bill</Breadcrumb.Item>
                         </Breadcrumb>
-                        {/* <Switch>
-                            <Route path={`/usermgr`} exact component={UserMgr}></Route>
-                            <Route path={`/article`} exact component={Article}></Route>
-                            <Route render={() => <h3>欢迎访问CMS后台管理系统</h3>}></Route>
-                        </Switch> */}
-                        111111
+                        {this.props.children}
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
                 </Layout>
