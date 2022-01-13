@@ -5,6 +5,7 @@ import Empty from './pages/Empty'
 import Login from './pages/Login'
 import UserMgr from '@/pages/UserMgr'
 import ArticleList from '@/pages/Article'
+import ArticleAdd from '@/pages/Article/Add'
 import Layout from '@/components/Layout'
 import './App.css';
 
@@ -19,9 +20,9 @@ class App extends Component {
 
           <Route path='/article' render={(props) => (
             <Switch>
-              <Layout>
-                <Route path="/article" render={(props) => <Redirect to='/article/list' />} />
-                <Route path="/article/list" component={ArticleList} />
+              <Layout {...props}>
+                <Route path="/article" exact component={ArticleList} />
+                <Route path="/article/add" component={ArticleAdd} />
               </Layout>
             </Switch>
           )}></Route>

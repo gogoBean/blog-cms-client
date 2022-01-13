@@ -27,7 +27,7 @@ class MenuBar extends Component {
 
     render () {
         console.log(this.props)
-        const currentPath = this.props.location.pathname
+        const currentPath = this.props.match.path
 
         return (
             <div className="my-side-bar">

@@ -5,3 +5,25 @@
 .icon-hover:hover {
   color: #40a9ff;
 }
+
+.btn-green {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  color: #fff;
+}
+
+.btn-green:hover {
+  background-color: #449d44;
+  border-color: #398439;
+}
+
+.btn-yellow {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  color: #fff;
+}
+
+.btn-yellow:hover {
+  background-color: #ec971f;
+  border-color: #d58512;
+}
