@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import UserMgr from '@/pages/UserMgr'
 import ArticleList from '@/pages/Article'
 import ArticleAdd from '@/pages/Article/Add'
+import ArticleEdit from '@/pages/Article/Edit'
 import Layout from '@/components/Layout'
 import './App.css';
 
@@ -23,6 +24,7 @@ class App extends Component {
               <Layout {...props}>
                 <Route path="/article" exact component={ArticleList} />
                 <Route path="/article/add" component={ArticleAdd} />
+                <Route path="/article/edit" component={ArticleEdit} />
               </Layout>
             </Switch>
           )}></Route>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Layout, Breadcrumb } from 'antd'
+import { Layout } from 'antd'
 import Top from '../../components/Top'
 import MenuBar from '../../components/MenuBar'
+import Breadcrumb from '@/components/Breadcrumb'
 
 import {
     MenuUnfoldOutlined,
@@ -36,10 +37,7 @@ class Home extends Component {
                         <Top></Top>
                     </Header>
                     <Content style={{ margin: '0 16px' }}>
-                        <Breadcrumb style={{ margin: '16px 0' }}>
-                            <Breadcrumb.Item>User</Breadcrumb.Item>
-                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                        </Breadcrumb>
+                        <Breadcrumb {...this.props} />
                         {this.props.children}
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
