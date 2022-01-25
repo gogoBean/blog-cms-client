@@ -27,7 +27,7 @@ class MenuBar extends Component {
 
     render () {
         console.log(this.props)
-        const currentPath = this.props.location.pathname
+        const currentPath = this.props.match.path
 
         return (
             <div className="my-side-bar">
@@ -35,10 +35,10 @@ class MenuBar extends Component {
                 <Menu onClick={this.handleMenuClick} theme="dark" 
                 selectedKeys={[currentPath]}
                  mode="inline">
-                    <Menu.Item key="/home/usermgr" icon={<UserOutlined />}>
+                    <Menu.Item key="/usermgr" icon={<UserOutlined />}>
                         用户管理
                     </Menu.Item>
-                    <Menu.Item key="/home/articlemgr" icon={<FileOutlined />}>
+                    <Menu.Item key="/article" icon={<FileOutlined />}>
                         文章管理
                     </Menu.Item>
                     <SubMenu key="sub1" icon={<PieChartOutlined />} title="User">

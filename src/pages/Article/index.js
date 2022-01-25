@@ -95,7 +95,7 @@ class index extends Component {
               type="primary"
               key="primary"
               onClick={() => {
-                console.log(1);
+                this.props.history.push('/article/add')
               }}
             >
               <PlusOutlined /> 新建
