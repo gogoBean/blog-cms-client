@@ -38,7 +38,9 @@ class Home extends Component {
                     </Header>
                     <Content style={{ margin: '0 16px' }}>
                         <Breadcrumb {...this.props} />
+                        <div className="site-layout-background layout-container">
                         {this.props.children}
+                        </div>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
                 </Layout>

@@ -24,7 +24,7 @@ class Add extends Component {
     render () {
 
         return (
-            <div className="site-layout-background layout-container">
+            <div>
                 <PageHeader className="site-page-header" title="编辑文章" />
                 <div>
                     <Form
