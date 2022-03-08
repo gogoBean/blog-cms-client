@@ -33,6 +33,11 @@ class index extends Component {
 
   columnsRender = () => [
     {
+      title: '序号',
+      dataIndex: 'index',
+      render:(text,record,index)=>`${index+1}`,
+    },  
+    {
       title: "Name",
       dataIndex: "name",
       key: "name",
@@ -87,7 +92,7 @@ class index extends Component {
 
   render() {
     return (
-      <div className="site-layout-background layout-container">
+      <div>
         <PageHeader className="site-page-header" title="文章列表" />
         <div className={styles.toolBar}>
           <Space size="middle">

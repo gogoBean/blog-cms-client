@@ -7,6 +7,7 @@ const routes = {
     '/article': '文章管理',
     '/article/add': '添加文章',
     '/article/edit': '编辑文章',
+    '/classify': '分类管理',
 }
 
 

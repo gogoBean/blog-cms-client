@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Menu } from 'antd';
 import {
-    DesktopOutlined,
-    PieChartOutlined,
+    // DesktopOutlined,
+    // PieChartOutlined,
     FileOutlined,
-    TeamOutlined,
+    // TeamOutlined,
     UserOutlined,
+    BlockOutlined
 } from '@ant-design/icons';
 import './index.less'
 
@@ -41,18 +42,21 @@ class MenuBar extends Component {
                     <Menu.Item key="/article" icon={<FileOutlined />}>
                         文章管理
                     </Menu.Item>
-                    <SubMenu key="sub1" icon={<PieChartOutlined />} title="User">
+                    <Menu.Item key="/classify" icon={<BlockOutlined />}>
+                        分类管理
+                    </Menu.Item>
+                    {/* <SubMenu key="sub1" icon={<PieChartOutlined />} title="User">
                         <Menu.Item key="3">Tom</Menu.Item>
                         <Menu.Item key="4">Bill</Menu.Item>
                         <Menu.Item key="5">Alex</Menu.Item>
-                    </SubMenu>
-                    <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
+                    </SubMenu> */}
+                    {/* <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
                         <Menu.Item key="6">Team 1</Menu.Item>
                         <Menu.Item key="8">Team 2</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item key="9" icon={<DesktopOutlined />}>
+                    </SubMenu> */}
+                    {/* <Menu.Item key="9" icon={<DesktopOutlined />}>
                         Files
-                    </Menu.Item>
+                    </Menu.Item> */}
                 </Menu>
             </div>
         )
