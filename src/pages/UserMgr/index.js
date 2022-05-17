@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { PageHeader, List, Avatar, Button, Input } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import styles from "./index.module.less";
+import { login } from '@/api/user'
 const { Search } = Input;
 
 const ListContent = ({ data: { owner, createdAt, percent, status } }) => (
@@ -45,6 +46,12 @@ class index extends Component {
       },
     ],
   };
+
+  componentDidMount() {
+    login().then(res=> {
+      console.log('res', res)
+    })
+  }
 
   render() {
     return (
